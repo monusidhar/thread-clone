@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
@@ -59,6 +58,9 @@ frontend
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
-=======
-# thread-clone
->>>>>>> aa626963eb3524a0911d295fa00c84b827cd6b2a
+Commands 
+php init  (for applying configuration to the apps)
+php yii migrate –migrationPath=@yii/rbac/migrations (to run RBAC migrations)
+php yii migrate/up (to run migrations)
+php yii fixture/load ‘*’ (to load all fixtures)
+php yii fixture/unload ‘*’ (to unload all fixtures)
