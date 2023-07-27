@@ -64,4 +64,6 @@ php yii migrate –migrationPath=@yii/rbac/migrations (to run RBAC migrations)
 php yii migrate/up (to run migrations)
 php yii fixture/load ‘*’ (to load all fixtures)
 php yii fixture/unload ‘*’ (to unload all fixtures)
+php yii rbac/init (for RBAC initialize)
+php yii migrate/create create_posts_table --fields="caption:string:notNull,pic_link_address:string:notNull,no_of_likes:integer,no_of_replies:integer,user_id:integer:notNull,no_of_likes_on_replies:integer,hide_like_count:integer,who_can_reply:string"; (for new migration)
 ```
