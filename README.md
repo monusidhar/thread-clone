@@ -60,7 +60,7 @@ environments/            contains environment-based overrides
 
 Commands 
 php init  (for applying configuration to the apps)
-php yii migrate –migrationPath=@yii/rbac/migrations (to run RBAC migrations)
+php yii migrate --migrationPath=@yii/rbac/migrations (to run RBAC migrations)
 php yii migrate/up (to run migrations)
 php yii fixture/load ‘*’ (to load all fixtures)
 php yii fixture/unload ‘*’ (to unload all fixtures)
