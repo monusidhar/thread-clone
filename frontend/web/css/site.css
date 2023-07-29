@@ -101,3 +101,28 @@ a.desc:after {
 {
     text-decoration: none;
 }
+/* login layout */
+.main-page{
+    background-image: url('../img/main.png');
+}
+.site-login {
+    padding: 15px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+img.insta-img {
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+}
+img.fb-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+img.stats-img {
+    position: absolute;
+    left: -120px;
+    bottom: 80px;
+}

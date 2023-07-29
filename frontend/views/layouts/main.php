@@ -43,6 +43,7 @@ AppAsset::register($this);
             ['label' => 'Tag', 'url' => ['/tag']],
             ['label' => 'User', 'url' => ['/user']],
             ['label' => 'Article', 'url' => ['/article']],
+            ['label' => 'User Profile', 'url' => ['/user-profile']],
         ];
     }
 
