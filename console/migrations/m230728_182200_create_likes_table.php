@@ -1,0 +1,36 @@
+<?php
+
+use yii\db\Migration;
+
+/**
+ * Handles the creation of table `{{%likes}}`.
+ */
+class m230728_182200_create_likes_table extends Migration
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
+    {
+        $this->createTable('{{%likes}}', [
+            'id' => $this->primaryKey(),
+            'user_id' => $this->integer()->notNull(),
+            'post_id' => $this->integer()->notNull(),
+            'created_at' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
+        ]);
+
+        // Add foreign key constraints
+        $this->addForeignKey('fk-likes-user', '{{%likes}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'CASCADE');
+        $this->addForeignKey('fk-likes-posts', '{{%likes}}', 'post_id', 'posts', 'id', 'CASCADE', 'CASCADE');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function safeDown()
+    {
+        $this->dropForeignKey('fk-likes-posts', '{{%likes}}');
+        $this->dropForeignKey('fk-likes-user', '{{%likes}}');
+        $this->dropTable('{{%likes}}');
+    }
+}
