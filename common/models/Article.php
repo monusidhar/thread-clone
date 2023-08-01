@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use frontend\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "article".
@@ -21,6 +22,13 @@ class Article extends \yii\db\ActiveRecord
         return 'article';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -30,6 +38,7 @@ class Article extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['description'], 'string'],
             [['title'], 'string', 'max' => 255],
+            [['created_at', 'updated_at'], 'safe'],
         ];
     }
 

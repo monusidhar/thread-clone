@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="article-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['enableClientValidation' => true, ]); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
