@@ -26,6 +26,26 @@ $column3Id = 'column3';
       user-select: none;
     }
 
+    .nav-link {
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .circular-icon {
+      border-radius: 100%;
+      background-color: transparent;
+      padding: 5px;
+      /* Adjust as needed */
+    }
+
+    svg symbol {
+      fill: white;
+    }
+
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -41,7 +61,7 @@ $column3Id = 'column3';
 <body>
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="bootstrap" viewBox="0 0 20 20">
+    <symbol id="bootstrap" viewBox="0 0 20 20" style="fill:white;">
       <title>Bootstrap</title>
       <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
     </symbol>
@@ -121,9 +141,8 @@ $column3Id = 'column3';
 
   <main class="d-flex">
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="height: calc(100vh - 88px);
-      overflow-y: auto;">
-      <a href="/" class="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+    <div class="d-flex flex-column flex-shrink-0 p-3" style="height: calc(100vh - 88px); background-color: black; overflow-y: auto;">
+      <a href="/" class="d-block p-3 link-light text-decoration-none rounded-circle border border-white" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
         <svg class="bi" width="40" height="32">
           <use xlink:href="#bootstrap" />
         </svg>
@@ -131,22 +150,22 @@ $column3Id = 'column3';
       </a>
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
-          <a href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+          <a href="#" class="nav-link py-3 border-bottom rounded-circle border border-white" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
             <svg class="bi" width="24" height="24" role="img" aria-label="Home">
               <use xlink:href="#home" />
             </svg>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
-            <svg class="bi" width="24" height="24" role="img" aria-label="Home">
+          <a href="#" class="nav-link py-3 border-bottom rounded-circle border border-white" aria-current="page" title="Search" data-bs-toggle="tooltip" data-bs-placement="right">
+            <svg class="bi" width="24" height="24" role="img" aria-label="Search">
               <use xlink:href="#search" />
             </svg>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
-            <svg class="bi" width="24" height="24" role="img" aria-label="Home">
+          <a href="#" class="nav-link py-3" aria-current="page" title="Notification" data-bs-toggle="tooltip" data-bs-placement="right">
+            <svg class="bi circular-icon" width="24" height="24" role="img" aria-label="Notification">
               <use xlink:href="#notification" />
             </svg>
           </a>
@@ -195,7 +214,7 @@ $column3Id = 'column3';
         </li>
       </ul>
       <div class="dropdown border-top">
-        <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+        <a href="#" class="d-flex align-items-center justify-content-center p-3 link-light text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
         </a>
         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
@@ -212,7 +231,7 @@ $column3Id = 'column3';
 
     <div class="b-example-divider"></div>
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 624px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white" style="width: 624px;  background-color:black;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32">
           <use xlink:href="#bootstrap" />
@@ -268,7 +287,7 @@ $column3Id = 'column3';
           <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
           <strong>mdo</strong>
         </a>
-        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdownUser1">
           <li><a class="dropdown-item" href="#">New project...</a></li>
           <li><a class="dropdown-item" href="#">Settings</a></li>
           <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -282,7 +301,7 @@ $column3Id = 'column3';
 
     <div class="b-example-divider"></div>
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 350px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 350px; background-color:black;">
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -294,19 +313,20 @@ $column3Id = 'column3';
             <h5 font-size="1.55rem" style="text-align:left;"><b>Get Verified</b></h5><br>
             <h6 style="text-align:left">Subscribe to unlock new features.</h6>
             <span class="badge rounded-pill bg-primary" align-self="initial">
-              <h5 font-size="1.25rem" >
-              <b>Get Verified</b></h5>
+              <h5 font-size="1.25rem">
+                <b>Get Verified</b>
+              </h5>
             </span>
           </span>
         </li>
-        <li>  
-           <span class="badge bg-dark">htr
-           </span>
+        <li>
+          <span class="badge bg-dark">htr
+          </span>
         </li>
       </ul>
       <hr>
       <div class="dropdown">
-        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+        <a href="#" class="d-flex align-items-center link-light text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
           <strong>mdo</strong>
         </a>
