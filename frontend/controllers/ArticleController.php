@@ -7,6 +7,8 @@
     use yii\web\Controller;
     use yii\web\NotFoundHttpException;
     use yii\filters\VerbFilter;
+    use yii\behaviors\TimestampBehavior;
+    use yii\db\Expression;
 
     /**
      * ArticleController implements the CRUD actions for article model.
@@ -20,7 +22,7 @@
         {
             return [
                 'access'=> [
-                    'class' => \Yii\filters\AccessControl::class,
+                    'class' => \yii\filters\AccessControl::class,
                     'only' => ['view'],
                     'rules' => [
                         [
